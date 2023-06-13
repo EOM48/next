@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문합서예</title>
+</head>
+<body>
+    <h3>메시께라!</h3>
+    <script>
+        let price = 0;
+        let coffee = prompt("무슨커피주문하젠?","");
+        switch(coffee) {
+            case "espreso":coffee
+            case "에스프레소" : price = 2000;
+            break;
+            case "카푸치노" : price = 3000;
+            break;
+            case "카페라떼" : price = 3500;
+            break;
+            default:
+                document.write(coffee + "는 없어예");
+        }
+        if(price !=0)
+        document.write(coffee + "는" + price + "원이우다.");
+    </script>
+    
+</body>
+</html>
