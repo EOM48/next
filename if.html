@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day;
+        let score = prompt("황기태님 점수를 입력하세요.", 100);
+        score = parseInt(score);
+        if (score >= 90)
+            day = "월";
+        else if (score >= 80)
+            day = "화";
+        else if (score >= 70)
+            day = "수";
+        else if (score >= 60)
+            day = "목";
+        else if (score >= 60)
+            day = "금";
+        else if (score >= 60)
+            day = "토";
+        else
+            day = "일";
+        document.write(score + "는" + grade + "입니다.<br>")
+    </script>
+</body>
+</html>

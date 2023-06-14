@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>별 출력 예제</title>
+  <style>
+    #stars {
+      font-size: 20px;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+  <div id="stars"></div>
+
+  <script>
+    function printStars(num) {
+      var starsDiv = document.getElementById('stars');
+      starsDiv.innerHTML = '';
+      
+      for (var i = 1; i <= num; i++) {
+        var starLine = document.createElement('p');
+        starLine.textContent = '*'.repeat(i);
+        starsDiv.appendChild(starLine);
+      }
+    }
+
+    printStars(5);
+  </script>
+</body>
+</html>
