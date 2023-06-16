@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function student(name, score) {
+        this.univ = "한국대학";
+        this.name = name;
+        this.score = score;
+        this.getgrade = function() {
+            if (this.score > 80) return "A";
+            else if (this.score > 60) return "B";
+            else return "F";
+        }
+    }
+    let jaeyoung = new student("엄재영", 95);
+    document.write(jaeyoung.univ + ", " + "학점은 " + jaeyoung.getgrade() + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

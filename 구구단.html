@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function 구구단() {
+            let n = prompt("구구단 몇 단을 원하세요?", "");
+            let m = parseInt(n);
+            if (isNaN(m) || m < 1 || m > 9) {
+                alert("잘못 입력하셨습니다.ㅠㅠ");
+                return;
+            }
+            for (let i = 1; i <= 9; i++) {
+                document.write(m + "x" + i + "=" + m * i + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3>구구단 출력 함수 만들기</h3>
+        <button onclick="구구단()">구구단 출력</button>
+    </div>
+</body>
+</html>
