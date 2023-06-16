@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FetckTest</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <h1>FetckTest</h1>
+    <div class="container">
+        <div class="low">
+            <div class="col" id="result"></div>
+            <button class="btn btn-primary" onclick="getonedata()">
+                데이터 한개 가져오기
+            </button>
+            <button class="btn btn-primary" onclick="getlistdata()">
+                데이터 여러개 가져오기
+            </button>
+            <button class="btn btn-primary" onclick="savedata()" 데이터저장하기>
+            </button>
+            </div>
+        
+    </div>
+    <script>
+        function getlistdata() {
+            fetch('https://jsonplaceholder.typicode.com/posts')
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+            console.log(json);
+            let dataArray = json;
+            let dviList = dataArray.map((onedata))
+        }
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then((response) => {
+            console.log('응답 response:', response);
+            return response.json();
+        })
+        .then((json) => {
+            console.log("json으로 변환된 응답:", json);
+            let userId = json.userId;
+            let id = json.id;
+            let body = json.body;
+            let title = json.title;
+
+            document.getElementById('result').innerHTML = "userId="+userId;
+        });
+    </script>
+</body>
+</html>
